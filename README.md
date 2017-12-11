@@ -3,9 +3,8 @@ GA Denver Project 1
 </br>
 [Trello Page](https://trello.com/b/l1rrTMiq)
 
-</br>
-## Wireframes
+## Wireframe Landing Page
 ![Wire Frames](images/LandingPage.png)
 
-## Wireframes
+## Wireframe Game Page
 ![Wire Frames](images/GameBoard.png)
