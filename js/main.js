@@ -3,7 +3,6 @@ console.log("java up and running");
 //list of questions and list of answers
 var questionBank = ["who has a big head", "who has a blanket", "who plays the piano", "who has a best bird friend"];
 var solutionBank = ["Charlie Brown", "Linus", "Schroeder", "Snoopy"];
-var clickValue = 0;
 
 //generate random question
 function generateQuestion() {
@@ -17,44 +16,51 @@ function generateQuestion() {
 
 //check answer function
 function checkAnswer(e) {
-    if ( e == answer){
+    if ( e.textContent == answer){
     	console.log(answer);
     	console.log(question);
+    	console.log(e.textContent);
     	console.log("right answer");
     	} else {
     	console.log("wrong answer");
+    	console.log(e.textContent);
+
     }
 }
- checkAnswer();
+ // checkAnswer();
 console.log(answer);
 
 //click answers by list of characters
 var charlieBrown = document.getElementById("charlieBrown").addEventListener("click", function(e){
-	checkAnswer(e);
+	checkAnswer(this);
+	console.log(e);
 });
 var sallyBrown = document.getElementById("sallyBrown").addEventListener("click", function(e){
-	checkAnswer(e);
+	checkAnswer(this);
+	console.log(e);
 });
 var marcie = document.getElementById("marcie").addEventListener("click", function(e){
-	checkAnswer(e);
+	checkAnswer(this);
+	console.log(e);
 });
 var peppermintpatty = document.getElementById("peppermintPatty").addEventListener("click", function(e){
-	checkAnswer(e);
+	checkAnswer(this);
+	console.log(e);
 });
 var schroeder = document.getElementById("schroeder").addEventListener("click", function(e){
-	checkAnswer(e);
+	checkAnswer(this);
 });
 var linus = document.getElementById("linus").addEventListener("click", function(e){
-	checkAnswer(e);
+	checkAnswer(this);
 });
 var lucy = document.getElementById("lucy").addEventListener("click", function(e){
-	checkAnswer(e);
+	checkAnswer(this);
 });
 var snoopy = document.getElementById("snoopy").addEventListener("click", function(e){
-	checkAnswer(e);
+	checkAnswer(this);
 });
 var woodstock = document.getElementById("woodstock").addEventListener("click", function(e){
-	checkAnswer(e);
+	checkAnswer(this);
 });
 
 

@@ -14,6 +14,12 @@ body {
 	text-align: center;
 	padding: 2%;
 }
+.selection {
+
+}
+.selection:hover {
+	
+}
 #charlieBrown {
 	background-image: url("../images/charliebrown.png");
 	background-size:contain;
@@ -138,6 +144,9 @@ body {
 	padding: 5%;
 	display: inline-block;
 	
+}
+#body {
+	background-image: url("../images/homepage.png");
 }
 #artwork {
 	align-content: center;
