@@ -15,27 +15,91 @@ var questionBank = ["who has a big head", "who has a blanket", "who plays the pi
 var solutionBank = ["Charlie Brown", "Linus", "Schroeder", "Snoopy"];
 var clickValue = 0;
 
+//generate random question
 function generateQuestion() {
-	var question = Math.floor(Math.random() * questionBank.length);
+	question = Math.floor(Math.random() * questionBank.length);
 	console.log(questionBank[question]);
 }
-generateQuestion();
+  	generateQuestion();
+	console.log(question);
 
 //check answer function
-// document.addEventListener("click", checkAnswer);
 function checkAnswer() {
-    if (question == solutionBank[questionBank] == clickValue){
-    	console.log(clickValue);
+	answer = solutionBank[question];
+    if (question == solutionBank[question]){
+    	console.log(solutionBank[question]);
     	console.log("right answer");
-    } else {
+    	} else {
     	console.log("wrong answer");
     }
-    generateQuestion();
 }
+ checkAnswer();
+console.log(answer);
 
 //click value
-charlieBrown.addEventListener("click", checkAnswer);
+document.getElementById("charlieBrown").addEventListener("click", console.log(answer));
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.getElementById("charlieBrown")
+// 		.addEventListener("click", checkAnswer() {
+// 			if (question == solutionBank[question]) {
+// 			console.log("charlie brown");
+// 			} else 
+// 			console.log("You are wrong");
+
+
+
+//---- example code from overstack ----//
+// var foo = 'a';    
+
+// document
+// .getElementById('foo')
+// .addEventListener('click', function(bar) {
+
+//   // return the actual event handler function
+//   return function() {
+//     doSomething(bar);
+//   };
+
+// }(foo) /* <-- passing in the current foo*/, false); 
+    
+// foo = 'b';
+
+// function doSomething (val) {
+//   alert(val);
+// }
+//---- end of example code ----//
+
+
+
+
+
+
+// function myFunction() {
+//     document.getElementById("field2").value = document.getElementById("field1").value;
+// }
 
 
 // if (charlieBrown == question == solutionBank[question])
