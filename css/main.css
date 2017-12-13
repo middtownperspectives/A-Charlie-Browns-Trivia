@@ -1,17 +1,22 @@
 body {
 	background-color: lightgray;
+	background-image: url("../images/doghouse.png");
+	background-size:contain;
 	color: black;
 }
 #questionBoard {
-	width: 100%;
+	width: 95%;
 	height: 30%;
 	border: 4px solid black;
-	margin: 0 auto;
+	margin: 2% auto;
 	border-radius: 20px;
 	display: inline-block;
 	text-align: center;
+	padding: 2%;
 }
 #charlieBrown {
+	background-image: url("../images/charliebrown.png");
+	background-size:contain;
 	border: 4px solid black;
 	width: 100px;
 	height: 100px;
@@ -19,7 +24,9 @@ body {
 	display: inline-block;
 	margin: 1%;
 }
-#sallyBrown {
+#pigpen {
+	background-image: url("../images/pigpen.png");
+	background-size:contain;
 	border: 4px solid black;
 	width: 100px;
 	height: 100px;
@@ -27,7 +34,9 @@ body {
 	display: inline-block;
 	margin: 1%;
 }
-#Marcie {
+#marcie {
+	background-image: url("../images/marcie.png");
+	background-size:contain;
 	border: 4px solid black;
 	width: 100px;
 	height: 100px;
@@ -36,6 +45,8 @@ body {
 	margin: 1%;
 } 
 #peppermintPatty {
+	background-image: url("../images/peppermintpatty.png");
+	background-size:contain;
 	border: 4px solid black;
 	width: 100px;
 	height: 100px;
@@ -44,6 +55,8 @@ body {
 	margin: 1%;
 }
 #schroeder {
+	background-image: url("../images/schroeder.png");
+	background-size:contain;
 	border: 4px solid black;
 	width: 100px;
 	height: 100px;
@@ -52,6 +65,8 @@ body {
 	margin: 1%;
 } 
 #linus {
+	background-image: url("../images/linus.png");
+	background-size:contain;
 	border: 4px solid black;
 	width: 100px;
 	height: 100px;
@@ -60,6 +75,8 @@ body {
 	margin: 1%;
 } 
 #lucy {
+	background-image: url("../images/lucy.png");
+	background-size:contain;
 	border: 4px solid black;
 	width: 100px;
 	height: 100px;
@@ -68,6 +85,8 @@ body {
 	margin: 1%;
 }
 #snoopy {
+	background-image: url("../images/snoopy.png");
+	background-size:contain;
 	border: 4px solid black;
 	width: 100px;
 	height: 100px;
@@ -76,6 +95,8 @@ body {
 	margin: 1%;
 } 
 #woodstock {
+	background-image: url("../images/woodstock.png");
+	background-size:contain;
 	border: 4px solid black;
 	width: 100px;
 	height: 100px;
@@ -83,7 +104,9 @@ body {
 	display: inline-block;
 	margin: 1%;
 }
-#schroeder {
+#sallyBrown {
+	background-image: url("../images/sally.png");
+	background-size:contain;
 	border: 4px solid black;
 	width: 100px;
 	height: 100px;
@@ -99,7 +122,6 @@ body {
 	margin-top: 10%;
 	text-align: center;	
 	display: inline-block;
-	float: left;
 }
 #characterSelect {
 	width: 70%;
@@ -110,11 +132,14 @@ body {
 	align-content: center;
 	text-align: center;
 	padding: 4px;
-	float: right;
 }
-#gameStart, button {
+#gameStart{
 	background-color: blue;
 	padding: 5%;
 	display: inline-block;
-	float: left;
+	
+}
+#artwork {
+	align-content: center;
+	text-align: center;
 }

@@ -1,14 +1,4 @@
 console.log("java up and running");
-//list of characters
-var charlieBrown = document.getElementById("charlieBrown");
-var sallyBrown = document.getElementById("sallyBrown");
-var marcie = document.getElementById("marcie");
-var peppermintpatty = document.getElementById("peppermintpatty");
-var schroeder = document.getElementById("schroeder");
-var linus = document.getElementById("linus");
-var lucy = document.getElementById("lucy");
-var snoopy = document.getElementById("snoopy");
-var woodstock = document.getElementById("woodstock");
 
 //list of questions and list of answers
 var questionBank = ["who has a big head", "who has a blanket", "who plays the piano", "who has a best bird friend"];
@@ -19,15 +9,17 @@ var clickValue = 0;
 function generateQuestion() {
 	question = Math.floor(Math.random() * questionBank.length);
 	console.log(questionBank[question]);
+	answer = solutionBank[question];
 }
   	generateQuestion();
 	console.log(question);
+	console.log(answer);
 
 //check answer function
-function checkAnswer() {
-	answer = solutionBank[question];
-    if (question == solutionBank[question]){
-    	console.log(solutionBank[question]);
+function checkAnswer(e) {
+    if ( e == answer){
+    	console.log(answer);
+    	console.log(question);
     	console.log("right answer");
     	} else {
     	console.log("wrong answer");
@@ -36,10 +28,34 @@ function checkAnswer() {
  checkAnswer();
 console.log(answer);
 
-//click value
-document.getElementById("charlieBrown").addEventListener("click", console.log(answer));
-
-
+//click answers by list of characters
+var charlieBrown = document.getElementById("charlieBrown").addEventListener("click", function(e){
+	checkAnswer(e);
+});
+var sallyBrown = document.getElementById("sallyBrown").addEventListener("click", function(e){
+	checkAnswer(e);
+});
+var marcie = document.getElementById("marcie").addEventListener("click", function(e){
+	checkAnswer(e);
+});
+var peppermintpatty = document.getElementById("peppermintPatty").addEventListener("click", function(e){
+	checkAnswer(e);
+});
+var schroeder = document.getElementById("schroeder").addEventListener("click", function(e){
+	checkAnswer(e);
+});
+var linus = document.getElementById("linus").addEventListener("click", function(e){
+	checkAnswer(e);
+});
+var lucy = document.getElementById("lucy").addEventListener("click", function(e){
+	checkAnswer(e);
+});
+var snoopy = document.getElementById("snoopy").addEventListener("click", function(e){
+	checkAnswer(e);
+});
+var woodstock = document.getElementById("woodstock").addEventListener("click", function(e){
+	checkAnswer(e);
+});
 
 
 
