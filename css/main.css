@@ -1,0 +1,120 @@
+body {
+	background-color: lightgray;
+	color: black;
+}
+#questionBoard {
+	width: 100%;
+	height: 30%;
+	border: 4px solid black;
+	margin: 0 auto;
+	border-radius: 20px;
+	display: inline-block;
+	text-align: center;
+}
+#charlieBrown {
+	border: 4px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1%;
+}
+#sallyBrown {
+	border: 4px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1%;
+}
+#Marcie {
+	border: 4px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1%;
+} 
+#peppermintPatty {
+	border: 4px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1%;
+}
+#schroeder {
+	border: 4px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1%;
+} 
+#linus {
+	border: 4px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1%;
+} 
+#lucy {
+	border: 4px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1%;
+}
+#snoopy {
+	border: 4px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1%;
+} 
+#woodstock {
+	border: 4px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1%;
+}
+#schroeder {
+	border: 4px solid black;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1%;
+}
+#scoreBox {
+	border: 4px solid black;
+	max-width: 10%;
+	max-height: 10%;
+	border-radius: 10px;
+	margin-top: 10%;
+	text-align: center;	
+	display: inline-block;
+	float: left;
+}
+#characterSelect {
+	width: 70%;
+	height: 30%;
+	border: 4px solid black;
+	margin: 0 auto;
+	border-radius: 20px;
+	align-content: center;
+	text-align: center;
+	padding: 4px;
+	float: right;
+}
+#gameStart, button {
+	background-color: blue;
+	padding: 5%;
+	display: inline-block;
+	float: left;
+}
