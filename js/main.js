@@ -1,25 +1,57 @@
 console.log("java up and running");
 
-//list of questions and list of answers
+//list of questions and list of answers and variables to maintain
 var questionBank = ["Who has a big head?", "Who has a blanket?", "Who plays the piano?", "Who has a best bird friend?"];
 var solutionBank = ["Charlie Brown", "Linus", "Schroeder", "Snoopy"];
 var trivia = document.getElementById("questionBoard");
+var playerOneScore = 0;
+var playerTwoScore = 0;
+var playerOne = document.getElementById("player1Score");
+var playerTwo = document.getElementById("player2Score");
+var removed = 0;
 
-//generate random question
+// generate random question
 function generateQuestion() {
 	question = Math.floor(Math.random() * questionBank.length);
 	console.log(questionBank[question]);
 	answer = solutionBank[question];
-	trivia.innerHTML += questionBank[question];
+	//remove question from questionbank
+	if (questionbank.length > -1) {
+    questionbank.splice(question, 1);
+}
+	trivia.innerHTML = questionBank[question];	
 }
   	// create onClick function for this
   	generateQuestion();
 	console.log(question);
 	console.log(answer);
 
+//question counter
+function questionCounter(){
+
+}
+
+
+
+
+
+
+// //remove question
+// function removeQuestion(){
+// 		questionBank.splice(question, 1);
+// 	}
+// 	console.log(removed);
+
+
+
 //check answer function
 function checkAnswer(e) {
+	console.log(playerOneScore);
     if ( e.textContent == answer){
+    	playerOneScore++;
+    	playerOne.innerHTML =  playerOneScore;
+    	console.log(playerOneScore);
+    	//     audio.play();
     	console.log(answer);
     	console.log(question);
     	console.log(e.textContent);
@@ -28,9 +60,13 @@ function checkAnswer(e) {
     	console.log("wrong answer");
     	console.log(e.textContent);
     }
+    generateQuestion();
 }
 
-
+//Restart Game
+function newGame() {
+  location.reload();
+}
 
 
  // checkAnswer();
@@ -71,6 +107,11 @@ var woodstock = document.getElementById("woodstock").addEventListener("click", f
 
 
 
+//play audio
+// function play(){
+// 	var audio = new Audio(url("../media/blokhead.wav"));
+//     audio.play();
+// }
 
 
 
@@ -83,6 +124,17 @@ var woodstock = document.getElementById("woodstock").addEventListener("click", f
 
 
 
+// function generateQuestion() {
+// 	for (var i = 0; i < Math.floor(Math.random() * questionBank.length){
+// 		questions = questionBank[i];
+// 	console.log(questionBank[question]);
+// 	answer = solutionBank[question];
+// 	trivia.innerHTML += questionBank[question];
+// }
+//   	// create onClick function for this
+//   	generateQuestion();
+// 	console.log(question);
+// 	console.log(answer);
 
 
 
