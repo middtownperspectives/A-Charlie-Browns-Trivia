@@ -1,15 +1,18 @@
 console.log("java up and running");
 
 //list of questions and list of answers
-var questionBank = ["who has a big head", "who has a blanket", "who plays the piano", "who has a best bird friend"];
+var questionBank = ["Who has a big head?", "Who has a blanket?", "Who plays the piano?", "Who has a best bird friend?"];
 var solutionBank = ["Charlie Brown", "Linus", "Schroeder", "Snoopy"];
+var trivia = document.getElementById("questionBoard");
 
 //generate random question
 function generateQuestion() {
 	question = Math.floor(Math.random() * questionBank.length);
 	console.log(questionBank[question]);
 	answer = solutionBank[question];
+	trivia.innerHTML += questionBank[question];
 }
+  	// create onClick function for this
   	generateQuestion();
 	console.log(question);
 	console.log(answer);
@@ -24,9 +27,12 @@ function checkAnswer(e) {
     	} else {
     	console.log("wrong answer");
     	console.log(e.textContent);
-
     }
 }
+
+
+
+
  // checkAnswer();
 console.log(answer);
 
