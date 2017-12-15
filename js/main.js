@@ -21,10 +21,7 @@ function getCurrentPlayer() {
 		currentPlayer = 2;
 	}
 }
-
-
-
-console.log(currentPlayerScore);
+	console.log(currentPlayerScore);
 //generate random question
 function generateQuestion() {
 
@@ -32,39 +29,25 @@ function generateQuestion() {
 	counter += 1;
 	answer = solutionBank[question];
 	trivia.innerHTML = questionBank[question];	
-
-	//find player's turn
-	if (counter === 1) {
-	alert("player one goes first!");
+		//find player's turn
+		if (counter === 1) {
+		alert("player one goes first!");
 	} else if (counter === 7) {
-	alert("player two's turn");
-	generateQuestion();
-	//player two turn;
+		alert("player two's turn");
+		generateQuestion();
+		//player two turn;
 	} else if (counter === 14) {
-
-	//player two stuff goes here?? -- help --
-	checkWinner();
-	alert("game over");
-	newGame();
-	} else {
-	//referesh page
-	}	
+		//player two stuff goes here?? -- help --
+		checkWinner();
+		alert("game over");
+		newGame();
+	} 
 }
   	generateQuestion();
   	console.log(question);
 	console.log(questionBank[question]);
 	console.log(answer);
 	console.log(counter);
-
-function checkWinner() {
-	if (playerOne == playerTwo){
-		alert("tie game, play another round");
-	} else if (playerOne > playerTwo) {
-		alert("player one wins!!");
-	} else if (playerOne < playerTwo) {
-		alert ("player two wins!!");
-	}
-}
 
 //check answer function
 function checkAnswer(e) {
@@ -88,29 +71,44 @@ function checkAnswer(e) {
 	  		playerTwoScore++;
 	  		playerTwo.innerHTML =  playerTwoScore;
 	  	}
-	 //    console.log(playerOneScore);
-	 //    console.log(answer);
-		// //console.log(question);
-	 //    console.log(e.textContent);
-	 //    console.log(counter);
-	 //    console.log("right answer");
     } else {
-    var otherDiv = document.createElement("div"); 
-	//and give it some content 
-  	var otherContent = document.createTextNode("You Block Head"); 
-	//add the text node to the newly created div
-  	otherDiv.appendChild(otherContent);  
-	//add the newly created element and its content into the DOM 
-  	var thatDiv = document.getElementById("displayBoard"); 
-  	document.body.insertBefore(otherDiv, thatDiv); 
-    console.log("wrong answer");
-    console.log(playerOneScore);
-    console.log(counter);
-    console.log(e.textContent);
-    }
+	    var otherDiv = document.createElement("div"); 
+		//and give it some content 
+	  	var otherContent = document.createTextNode("You Block Head"); 
+		//add the text node to the newly created div
+	  	otherDiv.appendChild(otherContent);  
+		//add the newly created element and its content into the DOM 
+	  	var thatDiv = document.getElementById("displayBoard"); 
+	  	document.body.insertBefore(otherDiv, thatDiv); 
+	    console.log("wrong answer");
+	    console.log(playerOneScore);
+	    console.log(counter);
+	    console.log(e.textContent);
+	    }
     generateQuestion();
 }
 
+function checkWinner(){
+	if (playerOneScore === playerTwoScore) {
+		var newDiv = document.createElement("div"); 
+	  	var newContent = document.createTextNode("Tie Game. Play Again!!!"); 
+	  	newDiv.appendChild(newContent);  
+	  	var currentDiv = document.getElementById("displayBoard"); 
+	  	document.body.insertBefore(newDiv, currentDiv); 
+	} else if (playerOneScore > playerTwoScore){
+		var otherDiv = document.createElement("div"); 
+	  	var otherContent = document.createTextNode("Player One Wins!!!"); 
+	  	otherDiv.appendChild(otherContent);  
+	  	var anotherDiv = document.getElementById("displayBoard"); 
+	  	document.body.insertBefore(otherDiv, anotherDiv); 
+	} else if (playerOneScore > playerTwoScore){
+		var thisDiv = document.createElement("div"); 
+	  	var thisContent = document.createTextNode("Player One Wins!!!"); 
+	  	thisDiv.appendChild(thisContent);  
+	  	var thatDiv = document.getElementById("displayBoard"); 
+	  	document.body.insertBefore(thisDiv, thatDiv); 
+	}
+}
 
 //Restart Game
 function newGame() {
@@ -156,7 +154,10 @@ var woodstock = document.getElementById("woodstock").addEventListener("click", f
 });
 
 
-
+function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+}
 
 //-------------- GRAVE YARD --------------//
 
