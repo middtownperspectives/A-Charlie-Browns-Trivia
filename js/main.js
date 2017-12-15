@@ -35,14 +35,14 @@ function generateQuestion() {
 		if (counter === 1) {
 		alert("player one goes first!");
 	} else if (counter === 8) {
-		alert("player two's turn");
+		setTimeout(function(){ alert("player two's turn"); }, 3000);
 		generateQuestion();
 		//player two turn;
 	} else if (counter === 15) {
 		//player two stuff goes here?? -- help --
 		checkWinner();
 		play3();
-		alert("game over");
+		setTimeout(function(){ alert("game over"); }, 5000);
 		newGame();
 	} 
 }
@@ -60,14 +60,14 @@ function checkAnswer(e) {
 	    getCurrentPlayer();
 	    console.log("right answer");
 
-		var newDiv = document.createElement("div"); 
-		//and give it some content 
-	  	var newContent = document.createTextNode("There is hope for you yet Charlie Brown!!"); 
-		//add the text node to the newly created div
-	  	newDiv.appendChild(newContent);  
-		//add the newly created element and its content into the DOM 
-	  	var currentDiv = document.getElementById("displayBoard"); 
-	  	document.body.insertBefore(newDiv, currentDiv); 
+		// var newDiv = document.createElement("div"); 
+		// //and give it some content 
+	 //  	var newContent = document.createTextNode("There is hope for you yet Charlie Brown!!"); 
+		// //add the text node to the newly created div
+	 //  	newDiv.appendChild(newContent);  
+		// //add the newly created element and its content into the DOM 
+	 //  	var currentDiv = document.getElementById("displayBoard"); 
+	 //  	document.body.insertBefore(newDiv, currentDiv); 
 
 	  	if(currentPlayer === 1) {
 	  		playerOneScore++;
@@ -79,14 +79,14 @@ function checkAnswer(e) {
 
     } else {
     	play1();
-	    var otherDiv = document.createElement("div"); 
-		//and give it some content 
-	  	var otherContent = document.createTextNode("You Block Head"); 
-		//add the text node to the newly created div
-	  	otherDiv.appendChild(otherContent);  
-		//add the newly created element and its content into the DOM 
-	  	var thatDiv = document.getElementById("displayBoard"); 
-	  	document.body.insertBefore(otherDiv, thatDiv); 
+	 //    var otherDiv = document.createElement("div"); 
+		// //and give it some content 
+	 //  	var otherContent = document.createTextNode("You Block Head"); 
+		// //add the text node to the newly created div
+	 //  	otherDiv.appendChild(otherContent);  
+		// //add the newly created element and its content into the DOM 
+	 //  	var thatDiv = document.getElementById("displayBoard"); 
+	 //  	document.body.insertBefore(otherDiv, thatDiv); 
 	    console.log("wrong answer");
 	    console.log(playerOneScore);
 	    console.log(counter);
