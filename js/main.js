@@ -8,103 +8,157 @@ var playerOneScore = 0;
 var playerTwoScore = 0;
 var playerOne = document.getElementById("player1Score");
 var playerTwo = document.getElementById("player2Score");
-var removed = 0;
+var counter = 0;
 
-// generate random question
+// if current player is player 1, currentPlayerScore = playerOneScore
+var currentPlayerScore = 0;
+var currentPlayer;
+
+function getCurrentPlayer() {
+	if (counter >= 1 && counter < 8) {
+		currentPlayer = 1;
+	} else if (counter >= 8 && counter < 15) {
+		currentPlayer = 2;
+	}
+}
+
+
+
+console.log(currentPlayerScore);
+//generate random question
 function generateQuestion() {
+
 	question = Math.floor(Math.random() * questionBank.length);
-	console.log(questionBank[question]);
+	counter += 1;
 	answer = solutionBank[question];
-	//remove question from questionbank
-	if (questionbank.length > -1) {
-    questionbank.splice(question, 1);
-}
 	trivia.innerHTML = questionBank[question];	
+
+	//find player's turn
+	if (counter === 1) {
+	alert("player one goes first!");
+	} else if (counter === 7) {
+	alert("player two's turn");
+	generateQuestion();
+	//player two turn;
+	} else if (counter === 14) {
+
+	//player two stuff goes here?? -- help --
+	checkWinner();
+	alert("game over");
+	newGame();
+	} else {
+	//referesh page
+	}	
 }
-  	// create onClick function for this
   	generateQuestion();
-	console.log(question);
+  	console.log(question);
+	console.log(questionBank[question]);
 	console.log(answer);
+	console.log(counter);
 
-//question counter
-function questionCounter(){
-
+function checkWinner() {
+	if (playerOne == playerTwo){
+		alert("tie game, play another round");
+	} else if (playerOne > playerTwo) {
+		alert("player one wins!!");
+	} else if (playerOne < playerTwo) {
+		alert ("player two wins!!");
+	}
 }
-
-
-
-
-
-
-// //remove question
-// function removeQuestion(){
-// 		questionBank.splice(question, 1);
-// 	}
-// 	console.log(removed);
-
-
 
 //check answer function
 function checkAnswer(e) {
-	console.log(playerOneScore);
+	//console.log(playerOneScore);
     if ( e.textContent == answer){
-    	playerOneScore++;
-    	playerOne.innerHTML =  playerOneScore;
-    	console.log(playerOneScore);
-    	//     audio.play();
-    	console.log(answer);
-    	console.log(question);
-    	console.log(e.textContent);
-    	console.log("right answer");
-    	} else {
-    	console.log("wrong answer");
-    	console.log(e.textContent);
+	    getCurrentPlayer();
+
+		var newDiv = document.createElement("div"); 
+		//and give it some content 
+	  	var newContent = document.createTextNode("There is hope for you yet Charlie Brown!!"); 
+		//add the text node to the newly created div
+	  	newDiv.appendChild(newContent);  
+		//add the newly created element and its content into the DOM 
+	  	var currentDiv = document.getElementById("displayBoard"); 
+	  	document.body.insertBefore(newDiv, currentDiv); 
+
+	  	if(currentPlayer === 1) {
+	  		playerOneScore++;
+	  		playerOne.innerHTML =  playerOneScore;
+	  	} else if (currentPlayer === 2) {
+	  		playerTwoScore++;
+	  		playerTwo.innerHTML =  playerTwoScore;
+	  	}
+	 //    console.log(playerOneScore);
+	 //    console.log(answer);
+		// //console.log(question);
+	 //    console.log(e.textContent);
+	 //    console.log(counter);
+	 //    console.log("right answer");
+    } else {
+    var otherDiv = document.createElement("div"); 
+	//and give it some content 
+  	var otherContent = document.createTextNode("You Block Head"); 
+	//add the text node to the newly created div
+  	otherDiv.appendChild(otherContent);  
+	//add the newly created element and its content into the DOM 
+  	var thatDiv = document.getElementById("displayBoard"); 
+  	document.body.insertBefore(otherDiv, thatDiv); 
+    console.log("wrong answer");
+    console.log(playerOneScore);
+    console.log(counter);
+    console.log(e.textContent);
     }
     generateQuestion();
 }
+
 
 //Restart Game
 function newGame() {
   location.reload();
 }
 
-
- // checkAnswer();
-console.log(answer);
-
 //click answers by list of characters
 var charlieBrown = document.getElementById("charlieBrown").addEventListener("click", function(e){
-	checkAnswer(this);
+	checkAnswer(this, currentPlayerScore);
+	console.log(currentPlayerScore);
 	console.log(e);
 });
 var sallyBrown = document.getElementById("sallyBrown").addEventListener("click", function(e){
-	checkAnswer(this);
+	checkAnswer(this, currentPlayerScore);
+	console.log(e);
+});
+var sallyBrown = document.getElementById("pigpen").addEventListener("click", function(e){
+	checkAnswer(this, currentPlayerScore);
 	console.log(e);
 });
 var marcie = document.getElementById("marcie").addEventListener("click", function(e){
-	checkAnswer(this);
+	checkAnswer(this, currentPlayerScore);
 	console.log(e);
 });
 var peppermintpatty = document.getElementById("peppermintPatty").addEventListener("click", function(e){
-	checkAnswer(this);
+	checkAnswer(this, currentPlayerScore);
 	console.log(e);
 });
 var schroeder = document.getElementById("schroeder").addEventListener("click", function(e){
-	checkAnswer(this);
+	checkAnswer(this, currentPlayerScore);
 });
 var linus = document.getElementById("linus").addEventListener("click", function(e){
-	checkAnswer(this);
+	checkAnswer(this, currentPlayerScore);
 });
 var lucy = document.getElementById("lucy").addEventListener("click", function(e){
-	checkAnswer(this);
+	checkAnswer(this, currentPlayerScore);
 });
 var snoopy = document.getElementById("snoopy").addEventListener("click", function(e){
-	checkAnswer(this);
+	checkAnswer(this, currentPlayerScore);
 });
 var woodstock = document.getElementById("woodstock").addEventListener("click", function(e){
-	checkAnswer(this);
+	checkAnswer(this, currentPlayerScore);
 });
 
+
+
+
+//-------------- GRAVE YARD --------------//
 
 
 //play audio
@@ -114,67 +168,9 @@ var woodstock = document.getElementById("woodstock").addEventListener("click", f
 // }
 
 
-
-
-
-
-
-
-
-
-
-
-// function generateQuestion() {
-// 	for (var i = 0; i < Math.floor(Math.random() * questionBank.length){
-// 		questions = questionBank[i];
-// 	console.log(questionBank[question]);
-// 	answer = solutionBank[question];
-// 	trivia.innerHTML += questionBank[question];
+// 	if (questionbank.length > -1) {
+//     questionbank.splice(question, 1);
 // }
-//   	// create onClick function for this
-//   	generateQuestion();
-// 	console.log(question);
-// 	console.log(answer);
-
-
-
-
-
-
-
-// document.getElementById("charlieBrown")
-// 		.addEventListener("click", checkAnswer() {
-// 			if (question == solutionBank[question]) {
-// 			console.log("charlie brown");
-// 			} else 
-// 			console.log("You are wrong");
-
-
-
-//---- example code from overstack ----//
-// var foo = 'a';    
-
-// document
-// .getElementById('foo')
-// .addEventListener('click', function(bar) {
-
-//   // return the actual event handler function
-//   return function() {
-//     doSomething(bar);
-//   };
-
-// }(foo) /* <-- passing in the current foo*/, false); 
-    
-// foo = 'b';
-
-// function doSomething (val) {
-//   alert(val);
-// }
-//---- end of example code ----//
-
-
-
-
 
 
 // function myFunction() {
@@ -188,11 +184,6 @@ var woodstock = document.getElementById("woodstock").addEventListener("click", f
 // 	console.log("charlie brown losing audio")
 // }
 // el.addEventListener("click", modifyText, false);
-
-
-
-
-
 
 
 //need to create a click button to start game
