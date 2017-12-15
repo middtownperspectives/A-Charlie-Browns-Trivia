@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/landingpage.css">
 	<title>A Charlie Brown's Trivia</title>
 </head>
 	<body>
-
-		<!-- where questions appear -->		
-		<div id="questionBoard"> </div>
-		<!-- where answer acknowlegement appears -->		
-		<div id="displayBoard"> </div>
-
-		<!-- Scoring area -->
-		<div id="scoreBox">
-			<h3>Scores</h3>
-			<h5>Player 1</h5>
-				<p id="player1Score">0</p>
-			<h5>Player 2</h5>
-				<p id="player2Score">0</p>
+		<div id="artwork">	
+				
+			<audio src="media/charliebrownthememusic.mp3" preload="auto" controls></audio>
+			
+			<div id="titleBox">
+				<h1>A Charlie Brown's Trivia</h1>
+			</div>
+			<div id="howToPlay">
+				<p class="title">How To Play?</p>
+				<ul>
+				<li>This is a two player game. But hey, you can play with your invisible friend!</li>
+				<li>Each player has 7 questions. after a total of 14 questions, a winner will be announced.</li>
+				<li>As many rounds as you would like, but keep track of your round per score (kids need the orgainizational practice). </li>
+				<li>Which ever player has the largest score wins!</li>
+				</ul>
+			</div>
+				
+			<a class="button" href="gameboard.html">PLAY GAME</a>		
+			
 		</div>
-
-		<!-- character selection area -->
-		<div id="characterSelect">
-			<div id="charlieBrown" id="selection"><p id="characterName">Charlie Brown</p></div>
-			<div id="pigpen" id="selection"><p id="characterName">Pig Pen</p></div>
-			<div id="marcie" id="selection"><p id="characterName">Marcie</p></div>
-			<div id="peppermintPatty" id="selection"><p id="characterName">Peppermint P</p></div>
-			<div id="schroeder" id="selection"><p id="characterName">Schroeder</p></div>
-			<div id="linus" id="selection"><p id="characterName">Linus</p></div>
-			<div id="lucy" id="selection"><p id="characterName">Lucy</p></div>
-			<div id="snoopy" id="selection"><p id="characterName">Snoopy</p></div>
-			<div id="woodstock" id="selection"><p id="characterName">Woodstock</p></div>
-			<div id="sallyBrown" id="selection"><p id="characterName">Sally Brown</p></div>
-		</div>
-
-	<!-- Javascript Link -->
-	<script type="text/javascript" src="js/main.js" ></script>
+	<script>
+    	document.getElementById("myAudio").play();
+	</script>
 	</body>
 </html>
