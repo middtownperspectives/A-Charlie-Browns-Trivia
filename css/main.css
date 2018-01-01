@@ -5,7 +5,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-.questionBoard {
+#questionBoard {
 	width: 95%;
 	height: 30%;
 	border: 4px solid black;
@@ -15,7 +15,7 @@ html {
 	text-align: center;
 	padding: 2%;
 }
-.characterName {
+#characterName {
 	visibility:hidden;
 	font-size: 16px;
 	display: bottom;
