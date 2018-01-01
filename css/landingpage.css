@@ -5,15 +5,15 @@ body {
 	background-repeat: no-repeat;
 	align-content: center;
 }
-#artwork {
+.artwork {
 	align-content: center;
 	text-align: center;
 }
-#titleBox{
+.titleBox{
 	font-size: 4em;
 	margin-top: -10%;
 }
-#howToPlay {
+.howToPlay {
 	font-family: 'Quicksand', sans-serif;
 	margin-right: 50%;
 	font-size: 1.4em;
