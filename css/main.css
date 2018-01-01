@@ -30,10 +30,13 @@ html {
 	border-radius: 10px;
 	display: inline-block;
 	margin: 1%;
+	font-size: 16px;
+
 }
 #charlieBrown:hover #characterName{
 	visibility:visible;
 	color: black;
+	font-size: 16px;
 	opacity: 0.7;
 }
 #pigpen {
@@ -50,6 +53,7 @@ html {
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
+	font-size: 16px;
 }
 #marcie {
 	background-image: url("../images/marcie.png");
@@ -65,6 +69,7 @@ html {
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
+	font-size: 16px;
 }
 #peppermintPatty {
 	background-image: url("../images/peppermintpatty.png");
@@ -80,6 +85,7 @@ html {
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
+	font-size: 16px;
 }
 #schroeder {
 	background-image: url("../images/schroeder.png");
@@ -95,6 +101,7 @@ html {
 	visibility:visible;
 	color: black
 	opacity: 0.7;
+	font-size: 16px;
 }
 #linus {
 	background-image: url("../images/linus.png");
@@ -110,6 +117,7 @@ html {
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
+	font-size: 16px;
 }
 #lucy {
 	background-image: url("../images/lucy.png");
@@ -125,6 +133,7 @@ html {
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
+	font-size: 16px;
 }
 #snoopy {
 	background-image: url("../images/snoopy.png");
@@ -155,6 +164,7 @@ html {
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
+	font-size: 16px;
 }
 #sallyBrown {
 	background-image: url("../images/sally.png");
@@ -171,6 +181,7 @@ html {
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
+	font-size: 16px;
 }
 /* character list ends */
 .scoreBox {
