@@ -2,43 +2,123 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<!-- Compiled and minified CSS -->
+	<!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 	<title>A Charlie Brown's Trivia</title>
 </head>
-	<body>
+<body>
+			<!-- Navbar goes here -->
+			<div class="navbar-fixed">
+				<nav>
+			     <div class="nav-wrapper">
+			       <h3 class="brand-logo center">A Charlie Brown's Trivia</h3>
+						 <ul class="right hide-on-med-and-down">
+							<li><i class="small material-icons">home</i></li>
+						 </ul>
+			     </div>
+			   </nav>
+			</div>
 
-		<!-- where questions appear -->		
-		<div id="questionBoard"> </div>
-		<!-- where answer acknowlegement appears -->		
-		<div id="displayBoard"> </div>
-
-		<!-- Scoring area -->
-		<div id="scoreBox">
-			<h3>Scores</h3>
-			<h5>Player 1</h5>
-				<p id="player1Score">0</p>
-			<h5>Player 2</h5>
-				<p id="player2Score">0</p>
+	<!-- Begin Main Area Here -->
+	<div class="container">
+	 <!-- Character Layout here -->
+	<div class="row teal">
+	 	<div class="row">
+			<div class="col s2 ">
+				<div class="card hoverable">
+					<div class="card-image">
+						<img src="images/charliebrown.png">
+					</div>
+					<div class="card-title center-align">
+						<p>Charlie Brown</p>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<!-- character selection area -->
-		<div id="characterSelect">
-			<div id="charlieBrown" id="selection"><p id="characterName">Charlie Brown</p></div>
-			<div id="pigpen" id="selection"><p id="characterName">Pig Pen</p></div>
-			<div id="marcie" id="selection"><p id="characterName">Marcie</p></div>
-			<div id="peppermintPatty" id="selection"><p id="characterName">Peppermint P</p></div>
-			<div id="schroeder" id="selection"><p id="characterName">Schroeder</p></div>
-			<div id="linus" id="selection"><p id="characterName">Linus</p></div>
-			<div id="lucy" id="selection"><p id="characterName">Lucy</p></div>
-			<div id="snoopy" id="selection"><p id="characterName">Snoopy</p></div>
-			<div id="woodstock" id="selection"><p id="characterName">Woodstock</p></div>
-			<div id="sallyBrown" id="selection"><p id="characterName">Sally Brown</p></div>
-		</div>
-	<audio id="audio1" src="media/notit.wav" type="audio/wav"></audio>
-	<audio id="audio2" src="media/youAreTheCharlieBrowniest.wav" type="audio/wav"></audio>
-	<audio id="audio3" src="media/takeitfromthetop.wav" type="audio/wav"></audio>
 
-	<!-- Javascript Link -->
-	<script type="text/javascript" src="js/main.js" ></script>
-	</body>
+		<div class="row">
+			<div class="col s2 ">
+				<div class="card hoverable">
+					<div class="card-image">
+						<img src="images/charliebrown.png">
+					</div>
+					<div class="card-title center-align">
+						<p>Charlie Brown</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+		 	 <div class="col s3">
+			 <!-- Grey navigation panel -->
+			 side bar
+		 </div>
+
+		 <div class="col s9">
+			 <!-- Teal page content  -->
+			 <!-- Page Content goes here -->
+
+			 questions
+		 </div>
+
+	 </div>
+
+
+			</div>
+
+
+
+
+
+
+
+
+			<!-- character selection area -->
+			<!-- <div class="characterSelect">
+				<div id="charlieBrown"><p class="characterName ">Charlie Brown</p></div>
+				<div id="pigpen"><p class="characterName">Pig Pen</p></div>
+				<div id="marcie"><p class="characterName">Marcie</p></div>
+				<div id="peppermintPatty"><p class="characterName">Peppermint P</p></div>
+				<div id="schroeder"><p class="characterName">Schroeder</p></div>
+				<div id="linus"><p class="characterName">Linus</p></div>
+				<div id="lucy"><p class="characterName">Lucy</p></div>
+				<div id="snoopy"><p class="characterName">Snoopy</p></div>
+				<div id="woodstock"><p class="characterName">Woodstock</p></div>
+				<div id="sallyBrown"><p class="characterName">Sally Brown</p></div>
+			</div> -->
+
+			<!-- where questions appear -->
+			<!-- <div id="questionBoard"> </div> -->
+			<!-- where answer acknowlegement appears -->
+			<!-- <div id="displayBoard"> </div> -->
+
+			<!-- Scoring area -->
+			<!-- <div id="scoreBox">
+				<h3>Scores</h3>
+				<h5>Player 1</h5>
+					<p id="player1Score">0</p>
+				<h5>Player 2</h5>
+					<p id="player2Score">0</p>
+			</div> -->
+
+		<audio id="audio1" src="media/notit.wav" type="audio/wav"></audio>
+		<audio id="audio2" src="media/youAreTheCharlieBrowniest.wav" type="audio/wav"></audio>
+		<audio id="audio3" src="media/takeitfromthetop.wav" type="audio/wav"></audio>
+
+		<!-- Javascript Link -->
+		<script type="text/javascript" src="js/main.js" ></script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+
+</body>
 </html>
