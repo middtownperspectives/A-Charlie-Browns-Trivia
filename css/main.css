@@ -1,5 +1,5 @@
-html { 
-  background: url("../images/doghouse.png") no-repeat center center fixed; 
+html {
+  background: url("../images/doghouse.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,7 +15,7 @@ html {
 	text-align: center;
 	padding: 2%;
 }
-#characterName {
+.characterName {
 	visibility:hidden;
 	font-size: 16px;
 	display: bottom;
@@ -33,7 +33,7 @@ html {
 	font-size: 16px;
 
 }
-#charlieBrown:hover #characterName{
+#charlieBrown:hover .characterName{
 	visibility:visible;
 	color: black;
 	font-size: 16px;
@@ -49,7 +49,7 @@ html {
 	display: inline-block;
 	margin: 1%;
 }
-#pigpen:hover #characterName{
+#pigpen:hover .characterName{
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
@@ -64,8 +64,8 @@ html {
 	border-radius: 10px;
 	display: inline-block;
 	margin: 1%;
-} 
-#marcie:hover #characterName{
+}
+#marcie:hover .characterName{
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
@@ -81,7 +81,7 @@ html {
 	display: inline-block;
 	margin: 1%;
 }
-#peppermintPatty:hover #characterName{
+#peppermintPatty:hover .characterName{
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
@@ -96,8 +96,8 @@ html {
 	border-radius: 10px;
 	display: inline-block;
 	margin: 1%;
-} 
-#schroeder:hover #characterName{
+}
+#schroeder:hover .characterName{
 	visibility:visible;
 	color: black
 	opacity: 0.7;
@@ -112,8 +112,8 @@ html {
 	border-radius: 10px;
 	display: inline-block;
 	margin: 1%;
-} 
-#linus:hover #characterName{
+}
+#linus:hover .characterName{
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
@@ -129,7 +129,7 @@ html {
 	display: inline-block;
 	margin: 1%;
 }
-#lucy:hover #characterName{
+#lucy:hover .characterName{
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
@@ -144,8 +144,8 @@ html {
 	border-radius: 10px;
 	display: inline-block;
 	margin: 1%;
-} 
-#snoopy:hover #characterName{
+}
+#snoopy:hover .characterName{
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
@@ -160,7 +160,7 @@ html {
 	display: inline-block;
 	margin: 1%;
 }
-#woodstock:hover #characterName{
+#woodstock:hover .characterName{
 	visibility:visible;
 	color: black;
 	opacity: 0.7;
@@ -177,19 +177,19 @@ html {
 	display: inline-block;
 	margin: 1%;
 }
-#sallyBrown:hover #characterName{
+#sallyBrown:hover .characterName{
 	visibility:visible;
 	color: black;
-	opacity: 0.7;
+	/* opacity: 0.7; */
 	font-size: 16px;
 }
 /* character list ends */
 .scoreBox {
 	border: 4px solid black;
-	max-width: 10%;
-	max-height: 10%;
+	max-width: 20%;
+	max-height: 20%;
 	border-radius: 10px;
-	text-align: center;	
+	text-align: center;
 	display: inline-block;
 	padding: 2%;
 }
