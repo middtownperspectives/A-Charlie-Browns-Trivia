@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/landingpage.css">
+	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet'>
+	<meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='stylesheet' type='text/css' href='css/landingpage.css'>
 	<title>A Charlie Brown's Trivia</title>
 </head>
 	<body>
-		<div class="artwork">	
-				
-			<audio src="media/charliebrownthememusic.mp3" preload="auto" controls></audio>
-			
-			<div class="titleBox">
+		<div class='artwork'>
+
+			<audio id="myAudio" src='media/charliebrownthememusic.mp3' preload='auto' controls></audio>
+
+			<div class='titleBox'>
 				<h1>A Charlie Brown's Trivia</h1>
 			</div>
-			<div class="howToPlay">
-				<p class="title">How To Play?</p>
+			<div class='howToPlay'>
+				<p class='title'>How To Play?</p>
 				<ul>
-				<li><strong>T</strong>his is a two player game. But hey, you can play with your invisible friend!</li>
-				<li><strong>E</strong>ach player has 7 questions. after a total of 14 questions, a winner will be announced.</li>
-				<li><strong>A</strong>s many rounds as you would like, but keep track of your round per score (kids need the orgainizational practice). </li>
+				<li><strong>T</strong>his is a two player game.</li>
+				<li><strong>E</strong>ach player has 7 questions. After a total of 14 questions, a winner will be announced and game reset.</li>
+				<li><strong>A</strong>s many rounds as you would like, but there is only officially one round. </li>
 				<li><strong>W</strong>hich ever player has the largest score wins!</li>
 				</ul>
 			</div>
-				
-			<a class="button" href="gameboard.html">PLAY GAME</a>		
-			
+
+			<div class='button-wrapper'>
+				<a class='play-button' href='gameboard.html'>PLAY GAME</a>
+			</div>
+
 		</div>
 	<script>
-    	document.getElementById("myAudio").play();
+    	document.getElementById('myAudio').play();
 	</script>
 	</body>
 </html>
