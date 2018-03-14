@@ -2,7 +2,7 @@
 GA Denver Project 1
 </br>
 [Trello Page](https://trello.com/b/l1rrTMiq) || 
-[Play Game](https://middtown.github.io/A-Charlie-Browns-Trivia/)
+[Play Game](https://middtown.github.io/Project1-A-Charlie-Browns-Trivia/)
 
 ## Wireframe Landing Page
 ![Wire Frames](images/LandingPage.png)
