@@ -7,50 +7,11 @@ $(document).ready(function () {
 });
 
 // end of all jquery
+
 //list of questions and list of answers and variables to maintain
-var questionBank = [{
-  question: 'Who has a big head?',
-  answer: 'charlieBrown',
-}, {
-  question: 'Who has a blanket?',
-  answer: 'linus',
-}, {
-  question: 'Refers to the cloud that surrounds him with pride as "the dust of ancient civilizations"?.',
-  answer: 'pigpen',
-}, {
-  question: 'Who believes in the "Great Pumpkin"?',
-  answer: 'linus',
-}, {
-  question: 'Who portrayed a shepherd in "A Charlie Brown Christmas"?',
-  answer: 'linus',
-}, {
-  question: 'Who hosted the Halloween party at her house in "It’s the Great Pumpkin Charlie Brown"?',
-  answer: 'sallyBrown',
-}, {
-  question: 'Who sits or leans on Schroeder piano?',
-  answer: 'lucy',
-}, {
-  question: 'She is the sweetest and the smartest of them all.',
-  answer: 'marcie',
-}, {
-  question: 'His archnemesis is a kite?',
-  answer: 'charlieBrown',
-}, {
-  question: 'Who is known to be crabby or bossy?',
-  answer: 'lucy',
-}, {
-  question: 'Who is the dustiest character?',
-  answer: 'pigpen',
-}, {
-  question: 'Who is Charlie Browns sister?',
-  answer: 'sallyBrown',
-}, {
-  question:  'Whose best friend is a bird?',
-  answer: 'snoopy',
-}, {
-  question: 'Who plays the piano?',
-  answer: 'schroeder',
-}];
+var questionBank = ['Who has a big head?', 'Who has a blanket?', 'Who plays the piano?', 'Whose best friend is a bird?', 'Who is Charlie Browns sister?', 'Who is the dustiest character?', 'Who is known to be crabby or bossy?', 'His archnemesis is a kite?', 'She is the sweetest and the smartest of them all.', 'Who sits or leans on Schroeder piano?', 'Who hosted the Halloween party at her house in "It’s the Great Pumpkin Charlie Brown"?', 'Who portrayed a shepherd in "A Charlie Brown Christmas"?', 'Who believes in the "Great Pumpkin"?', 'Refers to the cloud that surrounds him with pride as "the dust of ancient civilizations".'];
+
+var solutionBank = ['charlieBrown', 'linus', 'schroeder', 'snoopy', 'sallyBrown', 'pigpen', 'lucy', 'charlieBrown', 'marcie', 'lucy', 'sallyBrown', 'linus', 'linus', 'pigPen'];
 
 var trivia = document.getElementById('questionBoard');
 var playerOneScore = 0;
@@ -71,14 +32,16 @@ function getCurrentPlayer() {
   }
 }
 
-// console.log(currentPlayerScore);
+console.log(currentPlayerScore);
 
 //generate random question
 function generateQuestion() {
-  question = Math.floor(Math.random() * questionBank.length, 1);
+  question = Math.floor(Math.random() * questionBank.length);
+  questionBank.shift();
+  solutionBank.shift();
   counter += 1;
-  answer = questionBank[question].answer;
-  trivia.innerHTML = questionBank[question].question;
+  answer = solutionBank[question];
+  trivia.innerHTML = questionBank[question];
 
   //find player's turn
   if (counter === 1) {
@@ -99,6 +62,10 @@ function generateQuestion() {
 }
 
 generateQuestion();
+console.log(question);
+console.log(questionBank[question]);
+console.log(answer);
+console.log(counter);
 
 //clear box after initial selection
 function clearBox(displayBoard) {
@@ -107,12 +74,16 @@ function clearBox(displayBoard) {
 
 //check answer function
 function checkAnswer(e) {
+  console.log('checking answer');
+  console.log(e.id);
 
   //console.log(playerOneScore);
   if (e.id == answer) {
+    console.log(e.id);
     play2();
     getCurrentPlayer();
     clearBox();
+    console.log('right answer');
 
     var correctMessage = document.createElement('p');
 
@@ -148,6 +119,10 @@ function checkAnswer(e) {
     //add the newly created element and its content into the DOM
     message = document.getElementById('displayBoard');
     message.appendChild(blockheadMessage);
+    console.log('wrong answer');
+    console.log(playerOneScore);
+    console.log(counter);
+    console.log(answer);
   }
 
   generateQuestion();

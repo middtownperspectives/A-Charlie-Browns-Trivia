@@ -1,124 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<!-- Compiled and minified CSS -->
-	<!--Import Google Icon Font-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified CSS -->
+  <!--Import Google Icon Font-->
+  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>A Charlie Brown's Trivia</title>
+  <title>A Charlie Brown's Trivia</title>
 </head>
+
 <body>
-			<!-- Navbar goes here -->
-			<div class="navbar-fixed">
-				<nav>
-			     <div class="nav-wrapper">
-			       <h3 class="brand-logo center">A Charlie Brown's Trivia</h3>
-						 <ul class="right hide-on-med-and-down">
-							<li><i class="small material-icons">home</i></li>
-						 </ul>
-			     </div>
-			   </nav>
+  <!-- Navbar goes here -->
+  <div class="navbar navbar-fixed">
+    <nav>
+      <div class="nav-wrapper amber darken-4">
+        <h3 class="brand-logo center"><a href='index.html'>A Charlie Brown's Trivia</a></h3>
+        <ul class="right hide-on-med-and-down">
+          <li><a href='index.html' class="small material-icons">home</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Begin Main Area Here -->
+
+  <!-- question board  -->
+  <div class="row">
+    <div class="col s10 m8">
+      <div class="card teal lighten-4 card-custom">
+          <h3 class="card-title white-text">Question</h3>
+          <div id="questionBoard"> </div>
+      </div>
+    </div>
+    <!-- end question board  -->
+
+    <!-- begin player and score display board  -->
+    <!-- Scoring area -->
+    <div class="col s10 m3">
+      <div class="card teal lighten-4 card-custom">
+        <h3 class="card-title white-text">Scores</h3>
+        <div class="row">
+          <div class="col s12 m6">
+            <h5>Player 1</h5>
+            <p id="player1Score">0</p>
+          </div>
+          <div class="col s12 m6">
+            <h5>Player 2</h5>
+            <p id="player2Score">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End player and score display board  -->
+  </div>
+  <!-- end question and scoreboard row display  -->
+
+  <!-- Answer notification container -->
+<div class="container">
+  <div class="col s12 m6 card-custom">
+  	<div id="displayBoard"> </div>
+  </div>
+</div>
+
+  <!-- End answer notification container -->
+
+  <!-- Character Layout here -->
+  <div class="row">
+    <div id="charlieBrown" value="Charlie-Brown" class="col s5 m2 l1 center characterimage">
+      <div class="card hoverable characterimage">
+        <div target="Charlie Brown" class="card-panel">
+          <img src="images/charliebrown.png">
+        </div>
+        <div class="card-title center-align">
+          <h6 class="font-card-size">Charlie Brown</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character Layout here -->
+    <div  id="pigpen" value="Pig-Pen" class="col s5 m2 l1 center characterimage">
+      <div class="card hoverable characterimage">
+        <div class="card-panel">
+          <img src="images/pigpen.png">
+        </div>
+        <div class="card-title center-align">
+          <h6 class="font-card-size">Pigpen</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character Layout here -->
+    <div id="marcie" value="Marcie" class="col s5 m2 l1 center characterimage">
+      <div class="card hoverable characterimage">
+        <div class="card-panel">
+          <img src="images/marcie.png">
+        </div>
+        <div class="card-title center-align">
+          <h6 class="font-card-size">Marcie</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character Layout here -->
+    <div id="peppermintPatty" value="Peppermint-Patty" class="col s5 m2 l1 center characterimage">
+      <div class="card hoverable characterimage">
+        <div class="card-panel">
+          <img src="images/peppermintpatty.png">
+        </div>
+        <div class="card-title center-align">
+          <h6 class="font-card-size">Peppermint Patty</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character Layout here -->
+    <div id="schroeder" value="Schroeder" class="col s5 m2 l1 center characterimage">
+      <div class="card hoverable characterimage">
+        <div class="card-panel">
+          <img src="images/schroeder.png">
+        </div>
+        <div class="card-title center-align">
+          <h6 class="font-card-size">Schroeder</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character Layout here -->
+    <div id="linus" value="Linus" class="col s5 m2 l1 center characterimage">
+      <div class="card hoverable characterimage">
+        <div class="card-panel">
+          <img src="images/linus.png">
+        </div>
+        <div class="card-title center-align">
+          <h6 class="font-card-size">Linus</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character Layout here -->
+    <div id="lucy" value="Lucy" class="col s5 m2 l1 center characterimage">
+      <div class="card hoverable characterimage">
+        <div class="card-panel">
+          <img src="images/lucy.png">
+        </div>
+        <div class="card-title center-align">
+          <h6 class="font-card-size">Lucy</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character Layout here -->
+    <div id="snoopy" value="Snoopy" class="col s5 m2 l1 center characterimage">
+      <div class="card hoverable characterimage">
+        <div class="card-panel">
+          <img src="images/snoopy.png">
+        </div>
+        <div class="card-title center-align">
+          <h6 class="font-card-size">Snoopy</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character Layout here -->
+    <div id="woodstock" value="Woodstock" class="col s5 m2 l1 center characterimage">
+      <div class="card hoverable characterimage">
+        <div class="card-panel">
+          <img src="images/woodstock.png">
+        </div>
+        <div class="card-title center-align">
+          <h6 class="font-card-size">Woodstock</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character Layout here -->
+    <div id="sallyBrown" value="Sally-Brown" class="col s5 m2 l1 center characterimage">
+      <div class="card hoverable characterimage">
+        <div class="card-panel">
+          <img src="images/sally.png">
+        </div>
+        <div class="card-title center-align">
+          <h6 class="font-card-size">Sally Brown</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End character container -->
+
+  <div class="container center">
+
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light amber darken-4 btn modal-trigger" href="#modal1">How To Play</a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 class='title'>How To Play?</h4>
+				<ul>
+				<li><strong>T</strong>his is a two player game.</li>
+				<li><strong>E</strong>ach player has 7 questions. After a total of 14 questions, a winner will be announced and game reset.</li>
+				<li><strong>A</strong>s many rounds as you would like, but there is only officially one round. </li>
+				<li><strong>W</strong>hich ever player has the largest score wins!</li>
+				</ul>
 			</div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+      </div>
+    </div>
+    <!-- End Modal Structure -->
 
-	<!-- Begin Main Area Here -->
-	<div class="container">
-	 <!-- Character Layout here -->
-	<div class="row teal">
-	 	<div class="row">
-			<div class="col s2 ">
-				<div class="card hoverable">
-					<div class="card-image">
-						<img src="images/charliebrown.png">
-					</div>
-					<div class="card-title center-align">
-						<p>Charlie Brown</p>
-					</div>
-				</div>
-			</div>
-		</div>
+    <audio id="audio1" src="media/notit.wav" type="audio/wav"></audio>
+    <audio id="audio2" src="media/youAreTheCharlieBrowniest.wav" type="audio/wav"></audio>
+    <audio id="audio3" src="media/takeitfromthetop.wav" type="audio/wav"></audio>
 
-
-		<div class="row">
-			<div class="col s2 ">
-				<div class="card hoverable">
-					<div class="card-image">
-						<img src="images/charliebrown.png">
-					</div>
-					<div class="card-title center-align">
-						<p>Charlie Brown</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
-		 	 <div class="col s3">
-			 <!-- Grey navigation panel -->
-			 side bar
-		 </div>
-
-		 <div class="col s9">
-			 <!-- Teal page content  -->
-			 <!-- Page Content goes here -->
-
-			 questions
-		 </div>
-
-	 </div>
-
-
-			</div>
-
-
-
-
-
-
-
-
-			<!-- character selection area -->
-			<!-- <div class="characterSelect">
-				<div id="charlieBrown"><p class="characterName ">Charlie Brown</p></div>
-				<div id="pigpen"><p class="characterName">Pig Pen</p></div>
-				<div id="marcie"><p class="characterName">Marcie</p></div>
-				<div id="peppermintPatty"><p class="characterName">Peppermint P</p></div>
-				<div id="schroeder"><p class="characterName">Schroeder</p></div>
-				<div id="linus"><p class="characterName">Linus</p></div>
-				<div id="lucy"><p class="characterName">Lucy</p></div>
-				<div id="snoopy"><p class="characterName">Snoopy</p></div>
-				<div id="woodstock"><p class="characterName">Woodstock</p></div>
-				<div id="sallyBrown"><p class="characterName">Sally Brown</p></div>
-			</div> -->
-
-			<!-- where questions appear -->
-			<!-- <div id="questionBoard"> </div> -->
-			<!-- where answer acknowlegement appears -->
-			<!-- <div id="displayBoard"> </div> -->
-
-			<!-- Scoring area -->
-			<!-- <div id="scoreBox">
-				<h3>Scores</h3>
-				<h5>Player 1</h5>
-					<p id="player1Score">0</p>
-				<h5>Player 2</h5>
-					<p id="player2Score">0</p>
-			</div> -->
-
-		<audio id="audio1" src="media/notit.wav" type="audio/wav"></audio>
-		<audio id="audio2" src="media/youAreTheCharlieBrowniest.wav" type="audio/wav"></audio>
-		<audio id="audio3" src="media/takeitfromthetop.wav" type="audio/wav"></audio>
-
-		<!-- Javascript Link -->
-		<script type="text/javascript" src="js/main.js" ></script>
-		<!-- Compiled and minified JavaScript -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+    <!-- Javascript Link -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 </body>
+
 </html>

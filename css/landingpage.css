@@ -5,15 +5,15 @@ body {
 	background-repeat: no-repeat;
 	align-content: center;
 }
-#artwork {
+.artwork {
 	align-content: center;
 	text-align: center;
 }
-#titleBox{
+.titleBox{
 	font-size: 4em;
 	margin-top: -10%;
 }
-#howToPlay {
+.howToPlay {
 	font-family: 'Quicksand', sans-serif;
 	margin-right: 50%;
 	font-size: 1.4em;
@@ -37,7 +37,7 @@ ul {
 	text-decoration-style: none;
 	margin-top: -7%;
 }
-.button {
+.play-button {
 	background-color: orange;
 	font-size: 2em;
 	padding: 1%;
@@ -47,4 +47,21 @@ ul {
 	margin-bottom: 3%;
 	margin-left: 12%;
 	color: white;
+}
+@media only screen and (max-width: 768px) {
+
+.button-wrapper{
+	text-align: center;
+	width: 100%;
+}
+
+.play-button {
+	text-align: center;
+	width: 80%;
+}
+
+.title {
+	text-align: center;
+}
+
 }
