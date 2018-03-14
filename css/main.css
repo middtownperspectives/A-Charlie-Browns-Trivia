@@ -38,6 +38,7 @@ img {
 .navbar {
   height: auto;
   padding-bottom: 3em;
+  font-size: 1em;
 }
 
 .characterimage {
@@ -49,7 +50,7 @@ img {
   border-radius: 20px;
   height: 10em;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 #displayBoard {
