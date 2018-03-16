@@ -1,5 +1,4 @@
-# Project1-A-Charlie-Browns-Trivia
-GA Denver Project 1
+# A-Charlie-Browns-Trivia
 </br>
 [Trello Page](https://trello.com/b/l1rrTMiq) || 
 [Play Game](https://middtown.github.io/Project1-A-Charlie-Browns-Trivia/)
