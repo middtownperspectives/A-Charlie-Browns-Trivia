@@ -1,7 +1,8 @@
-# A-Charlie-Browns-Trivia
+# A Charlie Browns Trivia
 </br>
-![Trello Page](https://trello.com/b/l1rrTMiq) || 
-![Play Game](https://middtown.github.io/Project1-A-Charlie-Browns-Trivia/)
+
+[Trello Page](https://trello.com/b/l1rrTMiq). || 
+[Play Game](https://middtown.github.io/Project1-A-Charlie-Browns-Trivia/).
 
 ## Wireframe Landing Page
 ![Wire Frames](images/LandingPage.png)
